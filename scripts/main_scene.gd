@@ -80,4 +80,4 @@ func _on_player_game_over() -> void:
 	change_state(STATE.GAME_OVER)
 
 func _on_end_timer_timeout() -> void:
-	get_tree().change_scene_to_file(" ")
+	get_tree().change_scene_to_file("res://scenes/entry_scene.tscn")
