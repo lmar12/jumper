@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://3hhvwxxbvggi"]
+
+[ext_resource type="PackedScene" uid="uid://c087l0vo5xcrt" path="res://scenes/textMessage.tscn" id="1_2utf6"]
+[ext_resource type="Script" uid="uid://goqmyulhdyi8" path="res://scripts/game_over_message.gd" id="1_vi3yk"]
+
+[node name="GameOverMessage" type="Node" unique_id=265185064]
+script = ExtResource("1_vi3yk")
+
+[node name="TextMessage" parent="." unique_id=1136098509 instance=ExtResource("1_2utf6")]
+theme_override_font_sizes/font_size = 24
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="score_level" parent="." unique_id=1941801294 instance=ExtResource("1_2utf6")]
+offset_left = -72.0
+offset_top = -12.0
+offset_right = 104.0
+theme_override_font_sizes/font_size = 24
+text = "YOUR SCORE: 00
+
+MAX LEVEL : 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+freeze_time = 4.0
+time = 8

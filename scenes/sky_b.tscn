@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bluqwewtxl1qw"]
+
+[ext_resource type="Script" uid="uid://dvep2jlfdn7e8" path="res://scripts/sky_b.gd" id="1_y7wn5"]
+[ext_resource type="Texture2D" uid="uid://k346ap46ppvm" path="res://assets/parallax_c.png" id="2_4qwfn"]
+
+[node name="SkyB" type="Parallax2D" unique_id=1346725085]
+repeat_size = Vector2(96, 0)
+autoscroll = Vector2(-1, 0)
+repeat_times = 9
+script = ExtResource("1_y7wn5")
+metadata/_edit_group_ = true
+
+[node name="ParallaxA" type="Sprite2D" parent="." unique_id=1344094845]
+position = Vector2(72, 192)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_4qwfn")

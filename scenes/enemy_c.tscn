@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c2bwrlqnqtguk"]
+
+[ext_resource type="PackedScene" uid="uid://h6gphkh7obnw" path="res://scenes/enemy.tscn" id="1_pypdl"]
+[ext_resource type="Texture2D" uid="uid://72ptdna1p004" path="res://assets/tilemap-characters_packed.png" id="2_i5pxy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auwpc"]
+atlas = ExtResource("2_i5pxy")
+region = Rect2(144, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqt1v"]
+atlas = ExtResource("2_i5pxy")
+region = Rect2(168, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b817h"]
+atlas = ExtResource("2_i5pxy")
+region = Rect2(192, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yeifa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auwpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqt1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b817h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Enemy" unique_id=1153317390 instance=ExtResource("1_pypdl")]
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=417446758]
+sprite_frames = SubResource("SpriteFrames_yeifa")
+animation = &"default"
+autoplay = "default"
+frame_progress = 0.5881327

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c087l0vo5xcrt"]
+
+[ext_resource type="Script" uid="uid://cdab1ix73hi8y" path="res://scripts/text_message.gd" id="1_f3wbe"]
+[ext_resource type="FontFile" uid="uid://c6e2343d42qgx" path="res://assets/PixNull.ttf" id="1_qon7v"]
+
+[node name="TextMessage" type="Label" unique_id=1136098509]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -16.0
+offset_right = 96.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.20392033, 0.20392033, 0.20392033, 1)
+theme_override_fonts/font = ExtResource("1_qon7v")
+text = "PLACE YOUR TEXT HERE!"
+autowrap_mode = 2
+script = ExtResource("1_f3wbe")
+
+[node name="Timer" type="Timer" parent="." unique_id=1395164242]
+wait_time = 4.0
+
+[node name="FreezeTime" type="Timer" parent="." unique_id=1306635675]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="FreezeTime" to="." method="_on_freeze_timer_timeout"]

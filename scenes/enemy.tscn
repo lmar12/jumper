@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://h6gphkh7obnw"]
+
+[ext_resource type="Script" uid="uid://fdfd0kb4ovka" path="res://scripts/enemy.gd" id="1_phtou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hiits"]
+size = Vector2(16, 16)
+
+[node name="Enemy" type="Area2D" unique_id=1153317390 groups=["Pausable"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_phtou")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1115314102]
+shape = SubResource("RectangleShape2D_hiits")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=417446758]
+animation = &""
+autoplay = "move"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

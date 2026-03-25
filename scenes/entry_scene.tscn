@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://clbtghfgx4bie"]
+
+[ext_resource type="PackedScene" uid="uid://bluqwewtxl1qw" path="res://scenes/sky_b.tscn" id="1_djccg"]
+[ext_resource type="Script" uid="uid://ctlkj4pd1pth" path="res://scenes/entry_scene.gd" id="1_m6y4d"]
+[ext_resource type="PackedScene" uid="uid://c087l0vo5xcrt" path="res://scenes/textMessage.tscn" id="1_pev8h"]
+
+[node name="EntryScene" type="Node" unique_id=1541030264]
+script = ExtResource("1_m6y4d")
+
+[node name="SkyB" parent="." unique_id=1346725085 instance=ExtResource("1_djccg")]
+
+[node name="Title" parent="." unique_id=1136098509 instance=ExtResource("1_pev8h")]
+theme_override_font_sizes/font_size = 64
+text = "JUMPER!"
+freeze_time = 0.1
+time = 240
+
+[node name="Info" parent="." unique_id=1145627075 instance=ExtResource("1_pev8h")]
+visible = false
+offset_left = -160.0
+offset_top = 40.0
+offset_right = 16.0
+offset_bottom = 80.0
+text = "PRESS <SPACE> TO START!"
+freeze_time = 1.0
+time = 240
+
+[node name="Score" parent="." unique_id=1533678120 instance=ExtResource("1_pev8h")]
+visible = false
+offset_left = 224.0
+offset_top = 64.0
+offset_right = 400.0
+offset_bottom = 104.0
+text = "BEST SCORE: "
+freeze_time = 1.0
+time = 240
